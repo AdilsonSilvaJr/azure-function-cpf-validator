@@ -1,51 +1,52 @@
-# Azure Function CPF Validator
+# 🔗 Azure Function CPF Validator
 
-This project contains an Azure Function that validates Brazilian CPF numbers.
+This project contains an Azure Function that validates Brazilian CPF numbers. 🇧🇷
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### ✅ Prerequisites
 
-- [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [🔧 Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local)  
+- [📘 Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
-### Setup
+### 🛠️ Setup
 
-1. **Clone the repository**:
-```
-   git clone <repository-url>
+1. **📂 Clone the repository**:  
+   ```bash
+   git clone <repository-url>  
    cd azure-function-cpf-validator
-```
+   ```
 
-2. **Configure the Function App**: Update the `local.settings.json` file with your Azure Function App settings.
+2. **⚙️ Configure the Function App**: Update the `local.settings.json` file with your Azure Function App settings.
 
-3. **Deploy the Function**: Navigate to the project directory and deploy the function:
-```
+3. **☁️ Deploy the Function**: Navigate to the project directory and deploy the function:  
+   ```bash
    func azure functionapp publish <your-function-app-name>
-```
+   ```
 
-## Usage
+## 📡 Usage
 
 Once deployed, you can validate a CPF number by sending an HTTP request to the function's endpoint.
 
-### Example Request
-```
+### 🔍 Example Request
+```bash
 curl -X POST "https://<your-function-app-name>.azurewebsites.net/api/validacpf" -H "Content-Type: application/json" -d '{"cpf": "12345678909"}'
 ```
-### Example Response
-- Valid CPF:
-```
-  {
-    "valid": true
-  }
-```
-- Invalid CPF:
-```
-  {
-    "valid": false
-  }
-```
 
-## License
+### 📋 Example Response
+- ✅ **Valid CPF**:  
+   ```json
+   {
+     "valid": true
+   }
+   ```
+- ❌ **Invalid CPF**:  
+   ```json
+   {
+     "valid": false
+   }
+   ```
+
+## 📜 License
 
 This project is licensed under the MIT License.
