@@ -30,7 +30,8 @@ Once deployed, you can validate a CPF number by sending an HTTP request to the f
 
 ### 🔍 Example Request
 ```bash
-curl -X POST "https://<your-function-app-name>.azurewebsites.net/api/validacpf" -H "Content-Type: application/json" -d '{"cpf": "12345678909"}'
+curl -X POST "https://<your-function-app-name>.azurewebsites.net/api/validacpf" \
+-H "Content-Type: application/json" -d '{"cpf": "12345678909"}'
 ```
 
 ### 📋 Example Response
